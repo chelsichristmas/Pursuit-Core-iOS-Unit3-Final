@@ -28,6 +28,15 @@ class ElementViewController: UIViewController {
     
   }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailViewController = segue.destination as? DetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Unable to segue to Detail View Controller, missing index path")
+        }
+        let element = elements[indexPath.row]
+        detailViewController.element = element
+    }
+    
     func loadElements() {
         ElementAPIClient.getElements { [weak self] result in
             switch result {

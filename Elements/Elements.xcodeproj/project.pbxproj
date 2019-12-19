@@ -19,6 +19,7 @@
 		6B41E34F23ABE1D100593CD1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41E34E23ABE1D100593CD1 /* UIImageView+Extensions.swift */; };
 		6B41E35223ABE21300593CD1 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41E35123ABE21300593CD1 /* ElementCell.swift */; };
 		6B41E35423ABE62600593CD1 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41E35323ABE62600593CD1 /* UIViewController+Alerts.swift */; };
+		6B41E35623ABF0D200593CD1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B41E35523ABF0D200593CD1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6B41E34E23ABE1D100593CD1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		6B41E35123ABE21300593CD1 /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
 		6B41E35323ABE62600593CD1 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		6B41E35523ABF0D200593CD1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				5734756321DA90C700FB6177 /* ElementViewController.swift */,
+				6B41E35523ABF0D200593CD1 /* DetailViewController.swift */,
 				5734756521DA90C700FB6177 /* Main.storyboard */,
 				5734757321DA90F500FB6177 /* Supporting Files */,
 				5734756D21DA90C800FB6177 /* Info.plist */,
@@ -203,6 +206,7 @@
 				5734756421DA90C700FB6177 /* ElementViewController.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 				6B41E35223ABE21300593CD1 /* ElementCell.swift in Sources */,
+				6B41E35623ABF0D200593CD1 /* DetailViewController.swift in Sources */,
 				6B41E35423ABE62600593CD1 /* UIViewController+Alerts.swift in Sources */,
 				6B41E34523ABE14300593CD1 /* AppError.swift in Sources */,
 			);
