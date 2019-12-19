@@ -96,6 +96,10 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RvW-87-dI8">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="aU9-x6-cBS"/>
+                                    <constraint firstAttribute="width" constant="240" id="bNP-d9-hBQ"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -106,9 +110,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-hg-CMQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-hg-CMQ">
                                 <rect key="frame" x="99" y="345" width="12" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -154,8 +157,10 @@
                             <constraint firstItem="JVi-5R-Zef" firstAttribute="centerY" secondItem="Ohf-2V-1m6" secondAttribute="centerY" id="6pj-2N-o6T"/>
                             <constraint firstItem="RvW-87-dI8" firstAttribute="centerY" secondItem="Ohf-2V-1m6" secondAttribute="centerY" id="7ml-GT-Iwr"/>
                             <constraint firstItem="N3A-aS-lLS" firstAttribute="centerX" secondItem="Ohf-2V-1m6" secondAttribute="centerX" id="8AM-oM-bK6"/>
+                            <constraint firstItem="JVi-5R-Zef" firstAttribute="leading" secondItem="SeB-hg-CMQ" secondAttribute="trailing" constant="84" id="AAY-Pf-GOV"/>
                             <constraint firstItem="RvW-87-dI8" firstAttribute="height" secondItem="car-mi-S1Z" secondAttribute="height" multiplier="0.29703" id="BbZ-a6-Q4G"/>
                             <constraint firstItem="LMM-25-Uhz" firstAttribute="top" secondItem="N3A-aS-lLS" secondAttribute="bottom" constant="10" id="KCe-m5-gpF"/>
+                            <constraint firstItem="JVi-5R-Zef" firstAttribute="top" secondItem="SeB-hg-CMQ" secondAttribute="bottom" constant="60" id="SEW-pg-UGB"/>
                             <constraint firstItem="JVi-5R-Zef" firstAttribute="centerX" secondItem="Ohf-2V-1m6" secondAttribute="centerX" id="TwI-J9-VvK"/>
                             <constraint firstItem="car-mi-S1Z" firstAttribute="leading" secondItem="vMa-xR-lhZ" secondAttribute="leading" id="fNa-Ca-Ykk"/>
                             <constraint firstItem="RvW-87-dI8" firstAttribute="width" secondItem="car-mi-S1Z" secondAttribute="width" multiplier="0.57971" id="g9S-xD-x4Y"/>
