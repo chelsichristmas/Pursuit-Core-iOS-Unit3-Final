@@ -21,8 +21,18 @@ class ElementCell: UITableViewCell {
     func configureCell(for element: Element) {
         nameLabel.text = element.name
         descriptionLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass)"
+        var elementID = ""
+        if element.number < 10 {
+            elementID = "00\(element.number)"
+        } else if element.number >= 10 && element.number < 100 {
+            elementID = "0\(element.number)"
+        } else if element.number >= 100 {
+            elementID = "\(element.number)"
+        }
         
-        elementImageView.getImage(with: element.spectral_img ?? "no image") {[weak self] (result) in
+        let urlString = "http://www.theodoregray.com/periodictable/Tiles/\(elementID)/s7.JPG"
+        
+        elementImageView.getImage(with: urlString)  {[weak self] (result) in
             switch result {
             case .failure:
                 DispatchQueue.main.async {
