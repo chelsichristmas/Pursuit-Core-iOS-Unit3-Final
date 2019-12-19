@@ -14,6 +14,8 @@ struct Element: Decodable {
     var number: Int
     var spectral_img: String?
     var symbol: String
-
+    var boil: Double
+    var melt: Double
+    var discovered_by: String
 }
 
