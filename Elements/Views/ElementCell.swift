@@ -22,7 +22,7 @@ class ElementCell: UITableViewCell {
         nameLabel.text = element.name
         descriptionLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass)"
         
-        elementImageView.getImage(with: element.spectral_img) {[weak self] (result) in
+        elementImageView.getImage(with: element.spectral_img ?? "no image") {[weak self] (result) in
             switch result {
             case .failure:
                 DispatchQueue.main.async {

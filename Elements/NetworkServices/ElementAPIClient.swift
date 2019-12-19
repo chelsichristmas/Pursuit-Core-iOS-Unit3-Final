@@ -10,7 +10,7 @@ import Foundation
 
 struct ElementAPIClient {
     
-    static func getElement(completion: @escaping (Result<[Element],AppError>)->()) {
+    static func getElements(completion: @escaping (Result<[Element],AppError>)->()) {
         
         let elementEndpointURLString = "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements"
         guard let url = URL(string: elementEndpointURLString) else {

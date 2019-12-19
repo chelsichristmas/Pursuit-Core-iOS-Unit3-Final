@@ -13,6 +13,12 @@ extension UIImageView {
     func getImage(with urlString: String, completion: @escaping (Result<UIImage, AppError>) -> ()) {
         
         
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .orange
+        activityIndicator.startAnimating()
+        activityIndicator.center = center
+        addSubview(activityIndicator)
+        
         guard let url = URL(string: urlString) else {
             completion(.failure(.badURL(urlString)))
             return
@@ -20,7 +26,11 @@ extension UIImageView {
         
         let request = URLRequest(url: url)
         
-        NetworkHelper.shared.performDataTask(with: request) { (result) in
+        NetworkHelper.shared.performDataTask(with: request) { [weak activityIndicator] (result) in
+            
+            DispatchQueue.main.async {
+                activityIndicator?.stopAnimating()
+            }
             switch result {
             case .failure(let appError):
                 completion(.failure(.networkClientError(appError)))

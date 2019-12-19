@@ -12,7 +12,7 @@ struct Element: Decodable {
     var name: String
     var atomic_mass: Double
     var number: Int
-    var spectral_img: String
+    var spectral_img: String?
     var symbol: String
 
 }

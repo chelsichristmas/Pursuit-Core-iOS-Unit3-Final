@@ -24,14 +24,24 @@ class ElementViewController: UIViewController {
     super.viewDidLoad()
     tableView.dataSource = self
     tableView.delegate = self
+    loadElements()
     
   }
     
     func loadElements() {
-        
+        ElementAPIClient.getElements { [weak self] result in
+            switch result {
+            case .failure(let appError):
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "AppError", message: "\(appError)")
+                }
+            case .success(let elements):
+                self?.elements = elements
+            }
     }
 
 
+}
 }
 
 extension ElementViewController: UITableViewDataSource {
