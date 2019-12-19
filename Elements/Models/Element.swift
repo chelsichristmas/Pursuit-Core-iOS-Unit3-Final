@@ -8,14 +8,13 @@
 
 import Foundation
 
-struct Element: Decodable {
+struct Element: Codable {
     var name: String
     var atomic_mass: Double
     var number: Int
-    var spectral_img: String?
     var symbol: String
-    var boil: Double
-    var melt: Double
-    var discovered_by: String
+    var boil: Double?
+    var melt: Double?
+    var discovered_by: String?
 }
 

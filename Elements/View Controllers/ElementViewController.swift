@@ -17,16 +17,16 @@ class ElementViewController: UIViewController {
             }
         }
     }
-
+    
     @IBOutlet weak var tableView: UITableView!
-    
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    tableView.dataSource = self
-    tableView.delegate = self
-    loadElements()
-    
-  }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        loadElements()
+        
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,10 +47,8 @@ class ElementViewController: UIViewController {
             case .success(let elements):
                 self?.elements = elements
             }
+        }
     }
-
-
-}
 }
 
 extension ElementViewController: UITableViewDataSource {

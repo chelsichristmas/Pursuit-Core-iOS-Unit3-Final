@@ -15,12 +15,15 @@ class ElementCell: UITableViewCell {
   
     @IBOutlet weak var elementImageView: UIImageView!
     
+  
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     func configureCell(for element: Element) {
         nameLabel.text = element.name
         descriptionLabel.text = "\(element.symbol)(\(element.number)) \(element.atomic_mass)"
+        
+        
         var elementID = ""
         if element.number < 10 {
             elementID = "00\(element.number)"
@@ -45,5 +48,8 @@ class ElementCell: UITableViewCell {
             }
         }
     }
+    
+    
+    
     
 }

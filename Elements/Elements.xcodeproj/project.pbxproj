@@ -58,6 +58,7 @@
 				6B41E34A23ABE18800593CD1 /* Models */,
 				6B41E34D23ABE1AC00593CD1 /* Extensions */,
 				6B41E35023ABE1E600593CD1 /* Views */,
+				6B41E35723ABF5A100593CD1 /* View Controllers */,
 				5734756021DA90C700FB6177 /* Elements */,
 				5734755F21DA90C700FB6177 /* Products */,
 			);
@@ -74,8 +75,6 @@
 		5734756021DA90C700FB6177 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				5734756321DA90C700FB6177 /* ElementViewController.swift */,
-				6B41E35523ABF0D200593CD1 /* DetailViewController.swift */,
 				5734756521DA90C700FB6177 /* Main.storyboard */,
 				5734757321DA90F500FB6177 /* Supporting Files */,
 				5734756D21DA90C800FB6177 /* Info.plist */,
@@ -97,8 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				6B41E34423ABE14300593CD1 /* AppError.swift */,
-				6B41E34823ABE17500593CD1 /* ElementAPIClient.swift */,
 				6B41E34623ABE15A00593CD1 /* NetworkHelper.swift */,
+				6B41E34823ABE17500593CD1 /* ElementAPIClient.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -126,6 +125,15 @@
 				6B41E35123ABE21300593CD1 /* ElementCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6B41E35723ABF5A100593CD1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5734756321DA90C700FB6177 /* ElementViewController.swift */,
+				6B41E35523ABF0D200593CD1 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

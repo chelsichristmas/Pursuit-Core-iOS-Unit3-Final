@@ -15,9 +15,15 @@ extension UIImageView {
         
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .orange
-        activityIndicator.startAnimating()
         activityIndicator.center = center
-        addSubview(activityIndicator)
+        
+        DispatchQueue.main.async {
+            activityIndicator.startAnimating()
+            self.addSubview(activityIndicator)
+        }
+        
+        
+        
         
         guard let url = URL(string: urlString) else {
             completion(.failure(.badURL(urlString)))
@@ -41,4 +47,5 @@ extension UIImageView {
             }
         }
     }
+    
 }
